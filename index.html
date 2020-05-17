@@ -4,6 +4,18 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Вивчаю HTML</title>
+		<style>
+			table, td {
+				border-collapse: collapse;
+				border: 1px;
+			}
+
+			tr {
+				height: 50px;
+			}
+
+
+		</style>
 	</head>
 	
 
@@ -23,13 +35,55 @@
 					<li><a target="tab1" href="html/lists.html" title="Нажміть для переходу на сторінку списків" >Списки</a></li>
 				</ul>
 			</p>
-			
-			<hr>
-			<p>
-				Ця сторінка створена по першому уроці html. Окрім невпорядкованого списку на головній сторінці
-				де було додано стиль CSS, щоб забрати маркери, і списку визначень на вкладці списки. І так як 
-				я більше нічого не знаю, то більше нічого і не добавляв)))
-			</p>	 
 		</div>	
+			<hr>
+			
+				<table>
+					<tr>
+						<td rowspan="2">1</td>
+						<td colspan="2">1</td>
+						<td colspan="2">1</td>
+						<td>1</td>
+						
+					</tr>
+
+					<tr>
+						
+						<td colspan="4">1</td>
+						<td>1</td>
+						
+					</tr>
+
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td rowspan="2">1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">1</td>
+						<td>1</td>
+						<td>1</td>
+						<td rowspan="3" colspan="2">1</td>
+						
+					</tr>
+
+					<tr>
+						
+						<td rowspan="2" colspan="3">1</td>
+						
+					</tr>
+
+					<tr>
+						<td>1</td>
+					</tr>
+
+					
+				</table>	
+				 
+			
 	</body>
 <html>
