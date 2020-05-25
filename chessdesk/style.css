@@ -1,0 +1,75 @@
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.4em;
+    text-align: center;
+    margin:0;
+    }
+
+h1.horizontal{
+    margin-top: 6px; 
+}
+
+h1.vertical {
+    margin-top: 23.5px;
+}
+
+.vertical_r, .horizontal_top {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#conteiner {
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: cadetblue;
+    display: table;
+    }
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    display: table-cell;
+}
+
+.cell_white {
+    background-color: white;
+}
+
+.cell_black {
+    background-color: black;
+}
+
+.num_cell { 
+    background-color: white;
+    border: 1px solid black;
+}
+
+.num_ver {
+    width: 40px;
+    height: 75px;
+}
+
+.num_hor {
+    width: 75px;
+    height: 40px;
+}
+
+
+.num_first, .num_last {
+    width: 40px;
+    height: 40px;
+}
