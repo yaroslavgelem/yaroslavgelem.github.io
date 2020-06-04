@@ -1,0 +1,76 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+    box-sizing: border-box;
+    }
+
+header {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 640px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+h1 {
+    margin: 10px 0;
+    font-size: 1.7em;
+}
+#textarea{
+    width: 500px;
+    height: 30px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+#add_btn{
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#content{
+    margin: 0 auto;
+    padding: 0;
+    width: 640px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.item{
+    margin: 0;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+.list {
+    display: inline-block;
+    vertical-align: middle;
+    flex: 5;
+    display: flex;
+    align-items: center;
+}
+.list > img{
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+.list > p {
+    margin: 0;
+    display: inline-block;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+}
+.checked{
+    text-decoration: line-through;
+}
