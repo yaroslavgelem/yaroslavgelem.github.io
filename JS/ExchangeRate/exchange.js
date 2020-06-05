@@ -52,7 +52,7 @@ button.addEventListener("click", function(e){
     startDate = Date.parse(startDate);
     endDate = Date.parse(endDate);
     for (let i = startDate; i <= endDate; i = i + 24 * 3600 *1000){
-        stepDate = new Date(i).toISOString().substr(0, 10);
+        stepDate = new Date(i).toISOString().substr(0, 10).split("-").join("");
         arrDate.push(stepDate);
     }
     console.log(arrDate);
