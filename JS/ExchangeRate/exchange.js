@@ -10,8 +10,8 @@ content.appendChild(header);
 // Create tag <select>
 var select = document.createElement("select");
 header.appendChild(select);
-select.name = "currency selection";
-select.className = "currency";
+select.name = "currency_selection";
+select.id = "currency";
 for (let i = 0; i <= 3; i++){
     let selectOption = document.createElement("option");
     select.appendChild(selectOption);
@@ -44,16 +44,31 @@ var button = document.createElement("button");
 header.appendChild(button);
 button.innerText = "Get Rate...";
 
-button.addEventListener("click", function(e){
+button.addEventListener("click", getRate);
+    
+function getRate (e){
     let startDate = document.getElementsByClassName("field start_date")[0].value;
     let endDate = document.getElementsByClassName("field end_date")[0].value;
     let stepDate = "";
-    arrDate = [];
+    var arrDate = [];
     startDate = Date.parse(startDate);
     endDate = Date.parse(endDate);
     for (let i = startDate; i <= endDate; i = i + 24 * 3600 *1000){
         stepDate = new Date(i).toISOString().substr(0, 10).split("-").join("");
-        arrDate.push(stepDate);
+        arrDate.push(stepDate);    
     }
-    console.log(arrDate);
-})
+    for (let i = 0; i < arrDate.length ; i++){
+        var baseURL = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=";
+        var URI = baseURL + currency.value + "&date=" + arrDate[i] + "&json";
+        const XHR = new XMLHttpRequest();
+        XHR.open ("GET", URI);
+        XHR.send ();
+        XHR.addEventListener("readystatechange", handler);
+    }
+}
+function handler (e){
+    if ((e.target.readyState === 4) && (e.target.status === 200)){
+        console.log(e.target.responseText);
+        // var data = JSON.parse(e.target.responseText);
+    }
+}
